@@ -19,7 +19,7 @@ public void GetByID() {
 	
 	Transaction transaction = session.beginTransaction();
 	
-	Students st = session.find(Students.class, 501);
+	Students st = session.find(Students.class, 600);
 	System.out.println(st.toString());
 	
 	transaction.commit();

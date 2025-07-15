@@ -17,7 +17,7 @@ public class DeleteSingleData {
 		
 		Transaction transaction = session.beginTransaction();
 		
-		Students st = session.find(Students.class, 501);
+		Students st = session.find(Students.class, 500);
 		session.remove(st);
 		
 		transaction.commit();

@@ -13,7 +13,7 @@ public class Students {
 	private String name;
 	
 	private String email;
-	private String cources;
+	private String cource;
 	
 	private int marks;
 
@@ -42,11 +42,11 @@ public class Students {
 	}
 
 	public String getCources() {
-		return cources;
+		return cource;
 	}
 
 	public void setCources(String cources) {
-		this.cources = cources;
+		this.cource = cources;
 	}
 
 	public int getMarks() {
@@ -59,7 +59,7 @@ public class Students {
 
 	@Override
 	public String toString() {
-		return "Students [id=" + id + ", name=" + name + ", email=" + email + ", cources=" + cources + ", marks="
+		return "Students [id=" + id + ", name=" + name + ", email=" + email + ", cource=" + cource + ", marks="
 				+ marks + "]";
 	}
 	

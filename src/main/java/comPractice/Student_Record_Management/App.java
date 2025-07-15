@@ -1,46 +1,49 @@
 package comPractice.Student_Record_Management;
 
-/**
- * Hello world!
- *
- */
+import java.util.Scanner;
+
 public class App 
 {
     public static void main( String[] args )
     {
+      System.out.println("Student_record_management");
       
+  	System.out.println("Choose an option:" + "\n1. Add New Student" + "\n2. Display All Student"
+			+ "\n3. Search by Student_ID" + "\n4. Exit");
     	
-//    	//1.session Factory
-//    	SessionFactory factory = StudentManagementUtility.getSessionFactory();
-//      
-//        //2. session from session factory
-//    	Session session = factory.openSession();
-//        
-//        //3.Transaction from session
-//    	Transaction transaction = session.beginTransaction();
+  	Scanner sc = new Scanner(System.in);
+  	System.out.println("Enter your Choice");
+
+  	int choice = sc.nextInt();
+  	sc.nextLine();
+  	
+  	switch(choice) {
+  	
+  	case 1:
+  		Add_a_student ad = new Add_a_student();
+        ad.addStudent();
+  		break;
+  	
+  	case 2:
+  		GetStudentByID gd = new GetStudentByID();
+    	gd.GetByID();
+  		
+  	case 3:
+  		DeleteSingleData dd = new DeleteSingleData();
+    	dd.deleteData();
+    
+  	case 4:
+  		viewAllStudents vs = new viewAllStudents();
+    	vs.allStudent();
     	
-//    	Add_a_student ad = new Add_a_student();
-//    	ad.addStudent();
-    	
-//    	GetStudentByID gd = new GetStudentByID();
-//    	gd.GetByID();
-    	
-//    	DeleteSingleData dd = new DeleteSingleData();
-//    	dd.deleteData();
-    	
-//    	viewAllStudents vs = new viewAllStudents();
-//    	vs.allStudent();
-        
-    	
-    	UpdateStudentData ud = new UpdateStudentData();
+  	case 5:
+  		UpdateStudentData ud = new UpdateStudentData();
     	ud.updateData();
-//    	//4.save process
-//    	session.persist(ad);
-//    	
-//    	//5.pass to database
-//    	transaction.commit();
-//    	
-//    	// 6.close
-//    	session.close();
-    }
+    	
+  	case 6:
+  		System.out.println("Exiting program. Goodbye!");
+		System.exit(0); // Terminates the program immediately
+		break;
+  	}
+}
 }

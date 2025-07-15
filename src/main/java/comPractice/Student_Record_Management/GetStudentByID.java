@@ -17,12 +17,17 @@ public void GetByID() {
 	//2. session from session factory
 	Session session = factory.openSession();
 	
+	// 3. Transaction from session
 	Transaction transaction = session.beginTransaction();
 	
+	// 4.write your logic here
 	Students st = session.find(Students.class, 600);
 	System.out.println(st.toString());
 	
+	 // 5.pass to database
 	transaction.commit();
+	
+	 // 6.session close
 	session.close();
 	
 }

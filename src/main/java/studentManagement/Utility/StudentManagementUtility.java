@@ -5,9 +5,6 @@ import org.hibernate.cfg.Configuration;
 
 public class StudentManagementUtility {
 
-private StudentManagementUtility() {
-		
-	}
 	private static SessionFactory factory;
 	public static SessionFactory getSessionFactory() {
 		if(factory == null) {

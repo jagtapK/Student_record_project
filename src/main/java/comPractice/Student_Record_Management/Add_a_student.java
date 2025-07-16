@@ -47,6 +47,7 @@ public class Add_a_student {
 		//4.save process
     	session.persist(s);
     	
+    	System.out.println("Updated Successfully " + s);
     	//5.pass to database
     	transaction.commit();
 		

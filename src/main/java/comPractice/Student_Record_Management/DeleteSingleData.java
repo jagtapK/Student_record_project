@@ -17,8 +17,16 @@ public class DeleteSingleData {
 		
 		Transaction transaction = session.beginTransaction();
 		
-		Students st = session.find(Students.class, 600);
-		session.remove(st);
+//		Students st = session.find(Students.class, 600);
+//		session.remove(st);
+		
+		Students s = session.find(Students.class, 12);
+		s.setName("Don");
+		s.setMarks(99);
+		s.setCources(" Etc ");
+		s.setEmail(" Don@gmail.com");
+		
+		session.remove(s);
 		
 		transaction.commit();
 		session.close();

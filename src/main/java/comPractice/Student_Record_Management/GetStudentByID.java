@@ -21,8 +21,9 @@ public void GetByID() {
 	Transaction transaction = session.beginTransaction();
 	
 	// 4.write your logic here
-	Students st = session.find(Students.class, 600);
+	Students st = session.find(Students.class, 13);
 	System.out.println(st.toString());
+	
 	
 	 // 5.pass to database
 	transaction.commit();

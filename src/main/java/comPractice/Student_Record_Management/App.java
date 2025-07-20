@@ -8,8 +8,8 @@ public class App
     {
       System.out.println("Student_record_management");
       
-  	System.out.println("Choose an option:" + "\n1. Add New Student" + "\n2. Display All Student"
-			+ "\n3. Search by Student_ID" + "\n4. Exit");
+  	System.out.println("Choose an option:" + "\n1. Add New Student" + "\n2.get Student_ID "
+			+ "\n3. Delete Single Data" + "\n4. view All Students" + "\n5.Update Student Data" + "\n6.Exit");
     	
   	Scanner sc = new Scanner(System.in);
   	System.out.println("Enter your Choice");

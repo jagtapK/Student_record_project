@@ -1,14 +1,17 @@
 package studentManagement.Entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.OneToOne;
 
 @Entity
-@Table(name = "student_info")
 public class Students {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	
@@ -16,6 +19,19 @@ public class Students {
 	private String cource;
 	
 	private int marks;
+	
+	// one to one mapping from student ->
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Documents document;
+
+	public Documents getDocument() {
+		return document;
+	}
+
+	public void setDocument(Documents document) {
+		this.document = document;
+	}
 
 	public int getId() {
 		return id;

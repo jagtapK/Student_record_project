@@ -20,7 +20,7 @@ public class DeleteSingleData {
 //		Students st = session.find(Students.class, 600);
 //		session.remove(st);
 		
-		Students s = session.find(Students.class, 12);
+		Students s = session.find(Students.class, 2);
 		s.setName("Don");
 		s.setMarks(99);
 		s.setCources(" Etc ");

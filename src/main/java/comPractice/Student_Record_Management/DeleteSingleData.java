@@ -17,9 +17,6 @@ public class DeleteSingleData {
 		
 		Transaction transaction = session.beginTransaction();
 		
-//		Students st = session.find(Students.class, 600);
-//		session.remove(st);
-		
 		Students s = session.find(Students.class, 2);
 		s.setName("Don");
 		s.setMarks(99);
@@ -30,5 +27,7 @@ public class DeleteSingleData {
 		
 		transaction.commit();
 		session.close();
+		
+		System.out.println("Deleted Single Data ");
 	}
 }

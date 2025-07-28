@@ -50,6 +50,7 @@ public class Add_a_student {
     	System.out.println("Updated Successfully " + s);
     	//5.pass to database
     	transaction.commit();
+    	
 		
 	}
 	

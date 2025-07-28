@@ -8,9 +8,14 @@ public class App {
 		// Switch case to handle Multiple Operations
 		System.out.println("Student_record_management");
 
-		System.out.println("Choose an option:" + "\n1. Add New Student" + "\n2.get Student_ID "
-				+ "\n3. Delete Single Data" + "\n4. view All Students" + "\n5.Update Student Data" + 
-				"\n6.Add Student Details" + "\n7.Exit");
+		System.out.println("Choose an option:" + 
+				"\n1. Add New Student" + 
+				"\n2.get Student_ID "+ 
+				"\n3. Delete Single Data" + 
+				"\n4. view All Students" +
+				"\n5.Update Student Data" + 
+				"\n6.Add Student Details" +
+				"\n7.Exit");
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your Choice");
@@ -47,11 +52,13 @@ public class App {
 			ud.updateData();
 
 		case 6:
+			//Add Details
 			Create_Data c = new Create_Data();
 			c.AddDetails();
 			break;
 			
 		case 7:
+			//Exit
 			System.out.println("Exiting program. Goodbye!");
 			System.exit(0); // Terminates the program immediately
 			break;
